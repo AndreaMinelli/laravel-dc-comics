@@ -7,10 +7,14 @@
             <ul class="row">
                 @foreach ($comics as $comic)
                     <li class="comic-card">
-                        <figure>
-                            <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}" />
-                        </figure>
-                        <p>{{ $comic['series'] }}</p>
+                        <a href="{{ route('comics.show', $comic->id) }}">
+                            <figure>
+                                <img src="{{ $comic->thumb }}" alt="{{ $comic->series }}" />
+                            </figure>
+                        </a>
+                        <a href="{{ route('comics.show', $comic->id) }}">
+                            <p>{{ $comic->series }}</p>
+                        </a>
                     </li>
                 @endforeach
             </ul>
