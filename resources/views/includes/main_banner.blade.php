@@ -2,7 +2,7 @@
     $links = config('main_banner_links');
 @endphp
 
-<section id="main-banner">
+<div class="main-banner">
     <div class="container">
         <ul>
             @foreach ($links as $link)
@@ -17,4 +17,4 @@
             @endforeach
         </ul>
     </div>
-</section>
+</div>

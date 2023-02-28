@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('main-content')
-    <section id="current-series">
+    <section id="comics">
         <div class="container">
             <h2>CURRENT SERIES</h2>
             <ul class="row">
@@ -18,5 +18,6 @@
                 <button>LOAD MORE</button>
             </div>
         </div>
+        @include('includes.main_banner')
     </section>
 @endsection
