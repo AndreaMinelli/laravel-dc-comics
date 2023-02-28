@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ComicsController;
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/comics', [ComicsController::class, 'index'])->name('comics.index');
+
+
+Route::get('/', [PagesController::class, 'home'])->name('home');
+
+Route::get('/characters', [PagesController::class, 'characters'])->name('characters');
+
+Route::get('/collectibles', [PagesController::class, 'collectibles'])->name('collectibles');
+
+Route::get('/fans', [PagesController::class, 'fans'])->name('fans');
+
+Route::get('/games', [PagesController::class, 'games'])->name('games');
+
+Route::get('/movies', [PagesController::class, 'movies'])->name('movies');
+
+Route::get('/news', [PagesController::class, 'news'])->name('news');
+
+Route::get('/shop', [PagesController::class, 'shop'])->name('shop');
+
+Route::get('/tv', [PagesController::class, 'tv'])->name('tv');
+
+Route::get('/videos', [PagesController::class, 'videos'])->name('videos');
