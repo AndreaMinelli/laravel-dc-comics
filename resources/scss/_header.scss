@@ -1,0 +1,89 @@
+header {
+    .header-top {
+        font-size: 10px;
+        color: white;
+        background-color: $lightblue;
+
+        .container {
+            padding: 5px 0;
+            display: flex;
+            justify-content: end;
+        }
+
+        .more-site {
+            margin-left: 20px;
+        }
+
+        .fa-solid {
+            margin: 0 5px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            display: inline-block;
+            text-transform: uppercase;
+            line-height: 77px;
+            border-bottom: 3px solid transparent;
+            margin: 0 10px;
+            font-size: 11px;
+            font-weight: bold;
+            color: #666;
+
+            &:hover {
+                border-color: $lightblue;
+                color: $lightblue;
+            }
+
+            .fa-solid {
+                margin-left: 3px;
+                color: $lightblue;
+            }
+        }
+    }
+    .row {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+
+        form {
+            display: flex;
+            align-items: center;
+            input {
+                border: none;
+                margin-right: 5px;
+                width: 80px;
+
+                &::placeholder {
+                    font-weight: bold;
+                    text-align: end;
+                }
+            }
+            .wrapper {
+                border-bottom: 2px solid $lightblue;
+            }
+            button {
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+
+    figure {
+        width: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    .jumbotron {
+        background-image: url("../img/jumbotron.jpg");
+        height: 300px;
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

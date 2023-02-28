@@ -1,0 +1,51 @@
+main {
+    background-color: rgb(28, 28, 28);
+    color: white;
+
+    #current-series {
+        h2 {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: $lightblue;
+            font-size: 20px;
+            transform: translateY(-50%);
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+
+            .comic-card {
+                flex-basis: calc(100% / 6);
+                padding: 10px;
+
+                figure {
+                    width: 130px;
+                    height: 130px;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+
+                p {
+                    text-transform: uppercase;
+                    margin: 15px 0;
+                    font-size: 11px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .load-comics {
+            padding: 15px 0;
+            text-align: center;
+            button {
+                padding: 10px 40px;
+                font-weight: bold;
+                background-color: $lightblue;
+                color: white;
+                border: none;
+                font-size: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
