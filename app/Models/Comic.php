@@ -12,4 +12,9 @@ class Comic extends Model
         'artists' => 'array',
         'writers' => 'array'
     ];
+
+    public function getSaleDate()
+    {
+        return date('M d Y', strtotime($this->sale_date));
+    }
 }
