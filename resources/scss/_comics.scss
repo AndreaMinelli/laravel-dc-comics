@@ -37,10 +37,11 @@ main {
             }
         }
 
-        .load-comics {
+        .other-comics {
             padding: 15px 0;
             text-align: center;
-            button {
+            button,
+            a {
                 padding: 10px 40px;
                 font-weight: bold;
                 background-color: $lightblue;
@@ -48,6 +49,12 @@ main {
                 border: none;
                 font-size: 10px;
                 cursor: pointer;
+                font-family: "Open Sans";
+                margin: 0 5px;
+            }
+
+            a {
+                background-color: rgb(25, 135, 84);
             }
         }
     }

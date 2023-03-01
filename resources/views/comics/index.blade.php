@@ -18,7 +18,8 @@
                     </li>
                 @endforeach
             </ul>
-            <div class="load-comics">
+            <div class="other-comics">
+                <a href="{{ route('comics.create') }}">ADD COMIC</a>
                 <button>LOAD MORE</button>
             </div>
         </div>
