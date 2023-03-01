@@ -13,6 +13,8 @@ class Comic extends Model
         'writers' => 'array'
     ];
 
+    protected $fillable = ['title', 'description', 'thumb', 'price', 'series', 'sale_date', 'type', 'artists', 'writers'];
+
     public function getSaleDate()
     {
         return date('M d Y', strtotime($this->sale_date));

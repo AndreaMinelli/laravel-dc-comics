@@ -29,7 +29,14 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comic = $request->all();
+        $comic['artists'] = explode(', ', $comic['artists']);
+        $comic['writers'] = explode(', ', $comic['writers']);
+        $new_comic = new Comic();
+        $new_comic->fill($comic);
+        $new_comic->save();
+
+        return to_route('comics.show', $new_comic->id);
     }
 
     /**

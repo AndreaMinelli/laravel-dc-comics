@@ -38,9 +38,10 @@
                                 <p>Art by:</p>
                                 <div class="details">
                                     @foreach ($comic->artists as $artist)
-                                        <a href="#">{{ $artist }} @if (!$loop->last)
-                                                ,
-                                            @endif </a>
+                                        <a href="#">{{ $artist }}</a>
+                                        @if (!$loop->last)
+                                            ,
+                                        @endif
                                     @endforeach
                                 </div>
                             </li>
