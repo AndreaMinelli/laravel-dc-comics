@@ -24,8 +24,8 @@
             <ul>
                 @foreach ($links as $link)
                     <li>
-                        <a href="{{ route($link['url']) }}"
-                            class="{{ Route::is($link['url']) ? 'active' : '' }}">{{ $link['text'] }}
+                        <a href="{{ route($link['route']) }}"
+                            class="{{ request()->is($link['url'] . '*') ? 'active' : '' }}">{{ $link['text'] }}
                             @if ($loop->last)
                                 <i class="fa-solid fa-caret-down"></i>
                             @endif
