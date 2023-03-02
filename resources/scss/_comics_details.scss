@@ -99,6 +99,7 @@
         .row {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             .col {
                 flex-basis: 48%;
@@ -136,6 +137,16 @@
                             color: rgb(127, 202, 241);
                         }
                     }
+                }
+            }
+            .col-12 {
+                text-align: center;
+                .btn {
+                    display: inline-block;
+                    margin: 20px 0;
+                    padding: 10px 20px;
+                    background-color: $lightblue;
+                    color: white;
                 }
             }
         }

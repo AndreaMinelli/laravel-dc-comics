@@ -81,6 +81,9 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="col-12">
+                        <a class="btn" href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                    </div>
                 </div>
             </div>
         </div>
