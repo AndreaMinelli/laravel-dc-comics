@@ -5,6 +5,11 @@
         <div class="container">
             <h2>CURRENT SERIES</h2>
             <ul class="row">
+                @if (session('message'))
+                    <div class="col-12 alert">
+                        {{ session('message') }}
+                    </div>
+                @endif
                 @foreach ($comics as $comic)
                     <li class="comic-card">
                         <a href="{{ route('comics.show', $comic->id) }}">

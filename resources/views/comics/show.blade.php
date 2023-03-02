@@ -86,8 +86,13 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-12">
+                    <div class="col-4">
                         <a class="btn" href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn danger">Elimina</button>
+                        </form>
                     </div>
                 </div>
             </div>
