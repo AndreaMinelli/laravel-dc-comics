@@ -1,11 +1,22 @@
 @if ($comic->exists)
-    <form action="{{ route('comics.update', $comic->id) }}" method="POST">
+    <form action="{{ route('comics.update', $comic->id) }}" method="POST" novalidate>
         @method('PUT')
     @else
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.store') }}" method="POST" novalidate>
 @endif
 @csrf
 <div class="row">
+    @if ($errors->any())
+        <div class="col-12">
+            <div class="alert">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    @endif
     <div class="col-4">
         <label for="title">Titolo</label>
         <input type="text" id="title" name="title" placeholder="Inserisci titolo" required
