@@ -30,17 +30,30 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|string',
-            'description' => 'nullable|string',
-            'thumb' => 'required|url',
-            'price' => 'required|string',
-            'series' => 'required|string',
-            'sale_date' => 'required|date',
-            'type' => 'required|string',
-            'artists' => 'required|string',
-            'writers' => 'required|string'
-        ]);
+        $request->validate(
+            [
+                'title' => 'required|string',
+                'description' => 'nullable|string',
+                'thumb' => 'required|url',
+                'price' => 'required|string',
+                'series' => 'required|string',
+                'sale_date' => 'required|date',
+                'type' => 'required|string',
+                'artists' => 'required|string',
+                'writers' => 'required|string'
+            ],
+            [
+                'title.required' => 'Il campo Titolo è obbligatorio',
+                'thumb.required' => 'Il campo Immagine di copertina è obbligatorio',
+                'thumb.url' => 'Il campo Immagine di copertina deve essere un url',
+                'price.required' => 'Il campo Prezzo è obbligatorio',
+                'series.required' => 'Il campo Serie è obbligatorio',
+                'sale_date.required' => 'Il campo Data di uscita è obbligatorio',
+                'type.required' => 'Il campo Tipo di fumetto è obbligatorio',
+                'artists.required' => 'Il campo Artisti è obbligatorio',
+                'writers.required' => 'Il campo Scrittori è obbligatorio',
+            ]
+        );
 
         $comic = $request->all();
         $comic['artists'] = explode(', ', $comic['artists']);
