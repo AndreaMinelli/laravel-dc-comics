@@ -77,6 +77,6 @@ class ComicsController extends Controller
     {
         $comic->delete();
 
-        return to_route('comics.index')->with('message', "Il fumetto \"$comic->title\" eliminato correttamente!");
+        return to_route('comics.index')->with('message', "Il fumetto \"$comic->title\" é stato eliminato correttamente!");
     }
 }
