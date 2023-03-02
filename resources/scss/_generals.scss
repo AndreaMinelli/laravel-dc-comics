@@ -41,3 +41,8 @@ ul {
 .col-4 {
     width: calc(100% / 12 * 4);
 }
+
+.col-8 {
+    flex-basis: calc(100% / 12 * 8);
+    max-width: calc(100% / 12 * 8);
+}

@@ -8,6 +8,11 @@
                 <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
             </figure>
             <div class="row">
+                @if (session('message'))
+                    <div class="col-12 alert">
+                        {{ session('message') }}
+                    </div>
+                @endif
                 <div class="col-8">
                     <h3>{{ $comic->title }}</h3>
                     <div class="available">

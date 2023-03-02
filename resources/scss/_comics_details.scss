@@ -24,11 +24,18 @@
         .row {
             display: flex;
             padding: 50px 0;
+            flex-wrap: wrap;
+
+            .alert {
+                padding: 20px 10px;
+                background-color: lightgreen;
+                border-radius: 10px;
+                margin-bottom: 15px;
+                font-weight: bold;
+                color: white;
+            }
 
             .col-8 {
-                flex-basis: calc(100% / 12 * 8);
-                max-width: calc(100% / 12 * 8);
-
                 h3 {
                     color: rgb(28, 92, 151);
                     margin-bottom: 30px;

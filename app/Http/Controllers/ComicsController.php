@@ -66,7 +66,7 @@ class ComicsController extends Controller
         $comic->fill($updated_comic);
         $comic->save();
 
-        return to_route('comics.show', $comic->id);
+        return to_route('comics.show', $comic->id)->with('message', 'Modifica effettuata con successo');
     }
 
     /**
